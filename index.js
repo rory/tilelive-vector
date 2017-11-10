@@ -41,7 +41,8 @@ function Vector(uri, callback) {
             if (err) return callback(err);
             new Vector({
                 xml:xml,
-                base:path.dirname(filepath)
+                base:path.dirname(filepath),
+                scale:+uri.query.scale
             }, callback);
         });
         return;
